@@ -10,6 +10,9 @@ class DefaultToDoRepository: ToDoRepository {
         TODO()
     }
 
+    override suspend fun insertToDoItem(toDoEntity: ToDoEntity) :Long {
+        TODO()
+    }
 
     override suspend fun insertToDoList(toDoList: List<ToDoEntity>) {
         TODO()
@@ -24,6 +27,10 @@ class DefaultToDoRepository: ToDoRepository {
     }
 
     override suspend fun deleteAll() {
+        TODO("Not yet implemented")
+    }
+
+    override suspend fun deleteToDoItem(id: Long) :Boolean {
         TODO("Not yet implemented")
     }
 }
