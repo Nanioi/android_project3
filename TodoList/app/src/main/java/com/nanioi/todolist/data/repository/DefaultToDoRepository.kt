@@ -15,5 +15,15 @@ class DefaultToDoRepository: ToDoRepository {
         TODO()
     }
 
+    override suspend fun updateTodoItem(toDoEntity: ToDoEntity):Boolean {
+        TODO("Not yet implemented")
+    }
 
+    override suspend fun getToDoItem(id: Long): ToDoEntity{
+        TODO()
+    }
+
+    override suspend fun deleteAll() {
+        TODO("Not yet implemented")
+    }
 }
