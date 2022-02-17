@@ -1,7 +1,7 @@
 # android_project3
 - CleanArchitecture 사용하기
 
-##### Project1 - TodoList 앱
+### Project1 - TodoList 앱
 
 < 목표 >
 - koin 사용방법 배우기
