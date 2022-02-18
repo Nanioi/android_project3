@@ -20,14 +20,10 @@
 <img src = "https://user-images.githubusercontent.com/52556870/154615774-48b184e3-a368-4fe9-b600-f50977914a9e.jpg" width="200">
 </p>
 
-3. 삭제
+3. 삭제 및 전체 삭제
 <p float="left">
 <img src = "https://user-images.githubusercontent.com/52556870/154616007-8992e126-418a-4db7-aa63-2e4b44779857.jpg" width="200">
 <img src = "https://user-images.githubusercontent.com/52556870/154616009-f4091eca-14ce-4e9b-96ef-85daf5b5fffb.jpg" width="200">
-</p>
-
-4. 전부 삭제
-<p float="left">
 <img src = "https://user-images.githubusercontent.com/52556870/154615432-0a9ff623-8fd7-4cc7-aac8-62f56ad97094.jpg" width="200">
 <img src = "https://user-images.githubusercontent.com/52556870/154615105-50417d18-eb04-4e2e-b028-818d9b7d9762.jpg" width="200">
 </p>
