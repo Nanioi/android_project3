@@ -3,6 +3,22 @@
 
 ### Project1 - TodoList 앱
 
+< Tech Stack ⚒ > 
+- Clean Architecture
+- Koin
+- viewModel, LiveData, UseCase
+- Room library - Dao, Database
+- Swipe Refresh Layout
+
+< Learnd ✍🏻 >
+- Koin 사용방법 배우기
+- TDD 기반 비즈니스 로직 구현하기
+- Room Library 사용방법 배우기
+- Dao 비동기 원샷 쿼리방법으로 구현하기
+- UseCase 사용하여 ViewModel 구현하기
+- 테스트 코드 작성 방법 배우기
+- 클린아키텍쳐 사용해보기
+
 < 기능소개 📱 >
 
 1. 할일 추가
@@ -28,18 +44,3 @@
 <img src = "https://user-images.githubusercontent.com/52556870/154615105-50417d18-eb04-4e2e-b028-818d9b7d9762.jpg" width="200">
 </p>
 
-< Tech Stack ⚒ > 
-- Clean Architecture
-- Koin
-- viewModel, LiveData, UseCase
-- Room library - Dao, Database
-- Swipe Refresh Layout
-
-< Learnd ✍🏻 >
-- Koin 사용방법 배우기
-- TDD 기반 비즈니스 로직 구현하기
-- Room Library 사용방법 배우기
-- Dao 비동기 원샷 쿼리방법으로 구현하기
-- UseCase 사용하여 ViewModel 구현하기
-- 테스트 코드 작성 방법 배우기
-- 클린아키텍쳐 사용해보기
