@@ -6,7 +6,6 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
-import android.widget.Toast
 import androidx.core.view.isGone
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.nanioi.todolist.R
@@ -15,11 +14,11 @@ import com.nanioi.todolist.presentation.BaseActivity
 import com.nanioi.todolist.presentation.detail.DetailActivity
 import com.nanioi.todolist.presentation.detail.DetailMode
 import com.nanioi.todolist.presentation.view.ToDoAdapter
+import org.koin.android.viewmodel.ext.android.viewModel
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job
 import kotlin.coroutines.CoroutineContext
-import org.koin.android.viewmodel.ext.android.viewModel
 
 internal class ListActivity : BaseActivity<ListViewModel>(), CoroutineScope {
 
@@ -47,7 +46,6 @@ internal class ListActivity : BaseActivity<ListViewModel>(), CoroutineScope {
         }
 
         addToDoButton.setOnClickListener {
-            //todoItem 추가할때
             startActivityForResult(
                 DetailActivity.getIntent(this@ListActivity, DetailMode.WRITE),
                 DetailActivity.FETCH_REQUEST_CODE
@@ -55,7 +53,6 @@ internal class ListActivity : BaseActivity<ListViewModel>(), CoroutineScope {
         }
     }
 
-    //상태값이 변경될 때마다 상태값에 따라 분기처리
     override fun observeData() {
         viewModel.toDoListLiveData.observe(this) {
             when (it) {
@@ -69,7 +66,7 @@ internal class ListActivity : BaseActivity<ListViewModel>(), CoroutineScope {
                     handleSuccessState(it)
                 }
                 is ToDoListState.Error -> {
-                    handleErrorState()
+
                 }
             }
         }
@@ -91,7 +88,7 @@ internal class ListActivity : BaseActivity<ListViewModel>(), CoroutineScope {
             recyclerView.isGone = false
             adapter.setToDoList(
                 state.toDoList,
-                toDoItemClickListener = { // 일반 상세화면에서 들어갈 때
+                toDoItemClickListener = {
                     startActivityForResult(
                         DetailActivity.getIntent(this@ListActivity, it.id, DetailMode.DETAIL),
                         DetailActivity.FETCH_REQUEST_CODE
@@ -103,10 +100,6 @@ internal class ListActivity : BaseActivity<ListViewModel>(), CoroutineScope {
         }
     }
 
-    private fun handleErrorState(){
-        Toast.makeText(this, "에러가 발생했습니다.",Toast.LENGTH_SHORT).show()
-    }
-
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
         if (requestCode == DetailActivity.FETCH_REQUEST_CODE && resultCode == Activity.RESULT_OK) {
@@ -114,7 +107,6 @@ internal class ListActivity : BaseActivity<ListViewModel>(), CoroutineScope {
         }
     }
 
-    // 메뉴 - delete all 클릭시
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return when (item.itemId) {
             R.id.action_delete_all -> {
@@ -127,9 +119,9 @@ internal class ListActivity : BaseActivity<ListViewModel>(), CoroutineScope {
         }
     }
 
-    // 메뉴 클릭시
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         menuInflater.inflate(R.menu.list_menu, menu)
         return true
     }
+
 }
