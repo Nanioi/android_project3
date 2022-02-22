@@ -5,9 +5,14 @@ import com.nanioi.shoppingapplication.data.network.provideGsonConverterFactory
 import com.nanioi.shoppingapplication.data.network.provideProductApiService
 import com.nanioi.shoppingapplication.data.network.provideProductRetrofit
 import com.nanioi.shoppingapplication.domain.product.GetProductItemUseCase
+import com.nanioi.shoppingapplication.domain.product.GetProductListUseCase
+import com.nanioi.shoppingapplication.presentation.list.ProductListViewModel
+import com.nanioi.shoppingapplication.presentation.main.MainViewModel
+import com.nanioi.shoppingapplication.presentation.profile.ProfileViewModel
 import com.nanioi.shoppingapplication.repository.DefaultProductRepository
 import com.nanioi.shoppingapplication.repository.ProductRepository
 import kotlinx.coroutines.Dispatchers
+import org.koin.android.viewmodel.dsl.viewModel
 import org.koin.dsl.module
 
 internal val appModule = module {
@@ -16,9 +21,15 @@ internal val appModule = module {
     single { Dispatchers.Main }
     single { Dispatchers.IO }
 
+    // ViewModel
+    viewModel { MainViewModel() }
+    viewModel { ProductListViewModel(get()) }
+    viewModel { ProfileViewModel() }
+
 
     // UseCase
     factory { GetProductItemUseCase(get()) }
+    factory { GetProductListUseCase(get()) }
 
     //Repositories
     single<ProductRepository> { DefaultProductRepository(get(), get()) }
