@@ -1,5 +1,6 @@
 package com.nanioi.shoppingapplication.data.network
 
+import com.nanioi.shoppingapplication.BuildConfig
 import com.google.gson.FieldNamingPolicy
 import com.google.gson.GsonBuilder
 import okhttp3.OkHttpClient

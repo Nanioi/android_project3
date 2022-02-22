@@ -21,3 +21,5 @@ sealed class ToDoDetailState {
     object Write: ToDoDetailState()
 
 }
+
+
