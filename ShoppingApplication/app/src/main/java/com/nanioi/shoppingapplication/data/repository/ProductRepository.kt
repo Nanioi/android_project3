@@ -1,4 +1,4 @@
-package com.nanioi.shoppingapplication.repository
+package com.nanioi.shoppingapplication.data.repository
 
 import com.nanioi.shoppingapplication.data.entity.product.ProductEntity
 

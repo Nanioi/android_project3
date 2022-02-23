@@ -8,6 +8,7 @@ import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.nanioi.shoppingapplication.R
 import com.nanioi.shoppingapplication.databinding.ActivityMainBinding
 import com.nanioi.shoppingapplication.presentation.BaseActivity
+import com.nanioi.shoppingapplication.presentation.BaseFragment
 import com.nanioi.shoppingapplication.presentation.list.ProductListFragment
 import com.nanioi.shoppingapplication.presentation.profile.ProfileFragment
 import org.koin.android.viewmodel.ext.android.viewModel
@@ -31,8 +32,14 @@ internal class MainActivity : BaseActivity < MainViewModel, ActivityMainBinding 
         showFragment(ProductListFragment(), ProductListFragment.TAG)
     }
 
-    override fun observeData() {
-        TODO("Not yet implemented")
+    override fun observeData() = viewModel.mainStateLiveData.observe(this) {
+        when (it) {
+            is MainState.RefreshOrderList -> { // profile로 이동
+                binding.bottomNav.selectedItemId = R.id.menu_profile
+                val fragment = supportFragmentManager.findFragmentByTag(ProfileFragment.TAG)
+                // todo fragment BaseFragment 타입 캐스팅 fetchData()
+            }
+        }
     }
 
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
