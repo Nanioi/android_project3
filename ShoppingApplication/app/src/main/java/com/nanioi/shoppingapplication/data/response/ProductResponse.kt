@@ -15,13 +15,13 @@ data class ProductResponse(
 
     fun toEntity(): ProductEntity =
         ProductEntity(
-            id = id.toLong(),
             createdAt = Date(createdAt),
             productName = productName,
             productPrice = productPrice.toDouble().toInt(),
-            productImage = productImage,
             productType = productType,
-            productIntroductionImage = productIntroductionImage
+            productImage = productImage,
+            productIntroductionImage = productIntroductionImage,
+            id = id.toLong()
         )
 
 }

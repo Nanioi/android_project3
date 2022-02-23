@@ -1,5 +1,7 @@
 package com.nanioi.shoppingapplication.data.entity.product
 
+import androidx.room.Entity
+import androidx.room.PrimaryKey
 import java.util.*
 
 
@@ -15,13 +17,14 @@ import java.util.*
 },
  */
 
-
+@Entity
 data class ProductEntity(
-    val id: Long,
     val createdAt: Date,
     val productName: String,
     val productPrice: Int,
-    val productImage: String,
     val productType: String,
-    val productIntroductionImage: String
+    val productImage: String,
+    val productIntroductionImage: String,
+    @PrimaryKey val id: Long
 )
+

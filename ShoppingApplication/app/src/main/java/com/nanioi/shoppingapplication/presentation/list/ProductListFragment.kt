@@ -10,6 +10,7 @@ import com.nanioi.shoppingapplication.databinding.FragmentProfileBinding
 import com.nanioi.shoppingapplication.extensions.toast
 import com.nanioi.shoppingapplication.presentation.BaseActivity
 import com.nanioi.shoppingapplication.presentation.BaseFragment
+import com.nanioi.shoppingapplication.presentation.detail.ProductDetailActivity
 import com.nanioi.shoppingapplication.presentation.main.MainActivity
 import com.nanioi.shoppingapplication.presentation.profile.ProfileViewModel
 import org.koin.android.viewmodel.ext.android.viewModel
@@ -31,6 +32,9 @@ internal class ProductListFragment : BaseFragment<ProductListViewModel,FragmentP
         registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result: ActivityResult ->
             // todo 성공적으로 처리 완료 이후 동작
             // 주문 완료 후 체크 - 프로필 탭으로 이동 시키고 새로고침해주기 위해서 구현한 것
+            if (result.resultCode == ProductDetailActivity.PRODUCT_ORDERED_RESULT_CODE) {
+                (requireActivity() as MainActivity).viewModel.refreshOrderList()
+            }
         }
 
     private fun initViews(binding: FragmentProductListBinding) = with(binding) {
@@ -73,10 +77,9 @@ internal class ProductListFragment : BaseFragment<ProductListViewModel,FragmentP
             emptyResultTextView.isGone = true
             recyclerView.isGone = false
             adapter.setProductList(state.productList) {
-//                startProductDetailForResult.launch(
-//                    ProductDetailActivity.newIntent(requireContext(), it.id)
-//                )
-                requireContext().toast("Product Entity : $it")
+                startProductDetailForResult.launch(
+                    ProductDetailActivity.newIntent(requireContext(), it.id)
+                )
             }
         }
     }
