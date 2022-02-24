@@ -9,6 +9,7 @@
 - viewModel, LiveData, UseCase
 - Room library - Dao, Database
 - Swipe Refresh Layout
+- GoF State Pattern
 
 < 기능소개 📱 >
 
@@ -50,10 +51,11 @@
 - Clean Architecture
 - Koin
 - viewModel, LiveData, UseCase
-- Retrofit2, MockAPI
-- Firebase Auth, GoogleSignIn
-- Room, SharedPreference
+- Retrofit2, Mock API
+- Firebase Auth, Google SignIn
+- Room - Dao, Database, SharedPreference
 - Swipe Refresh Layout
+- GoF State Pattern
 
 < 기능소개 📱 >
 1. 제품리스트 & 새로고침
