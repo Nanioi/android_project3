@@ -34,7 +34,7 @@
         android:id="@+id/profileGroup"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        app:constraint_referenced_ids="profileImageView,userNameTextView,logoutButton"
+        app:constraint_referenced_ids="profileImageView,userNameTextView,logoutButton,recyclerView"
         android:visibility="gone"
         tools:visibility="visible"/>
 

@@ -37,7 +37,8 @@ internal class MainActivity : BaseActivity < MainViewModel, ActivityMainBinding 
             is MainState.RefreshOrderList -> { // profile로 이동
                 binding.bottomNav.selectedItemId = R.id.menu_profile
                 val fragment = supportFragmentManager.findFragmentByTag(ProfileFragment.TAG)
-                // todo fragment BaseFragment 타입 캐스팅 fetchData()
+                //fragment BaseFragment 타입 캐스팅 fetchData()
+                (fragment as? BaseFragment<*, *>)?.viewModel?.fetchData()
             }
         }
     }
