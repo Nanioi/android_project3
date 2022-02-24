@@ -55,13 +55,6 @@
 - Room, SharedPreference
 - Swipe Refresh Layout
 
-< Learnd ✍🏻 >
-- Clean Architecture, Koin 사용방법 배우기
-- Firebase에서 SHA-1키 등록해 구글로그인하는 방법 배우기
-- MockAPI 이용해 데이터 리스트 만들기
-- Retrofit2, Room이용해 데이터 불러오기
-- UseCase 사용하여 ViewModel 구현하기
-- 
 < 기능소개 📱 >
 1. 제품리스트 & 새로고침
 2. 제품 상세보기 및 주문하기
@@ -79,3 +72,10 @@
 <img src = "https://user-images.githubusercontent.com/52556870/155465899-74125621-fa2d-495d-a627-8af60199eeca.jpg" width="200">
 <img src = "https://user-images.githubusercontent.com/52556870/155465908-f1641218-9a08-4d33-8835-0dba81dc78b1.jpg" width="200">
 </p>
+
+< Learnd ✍🏻 >
+- Clean Architecture, Koin 사용방법 배우기
+- Firebase에서 SHA-1키 등록해 구글로그인하는 방법 배우기
+- MockAPI 이용해 데이터 리스트 만들기
+- Retrofit2, Room이용해 데이터 불러오기
+- UseCase 사용하여 ViewModel 구현하기
