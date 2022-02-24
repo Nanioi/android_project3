@@ -64,13 +64,14 @@
 < ScreenShot 📸 >
 <p float="left">
 <img src = "https://user-images.githubusercontent.com/52556870/155465837-bb8d8906-59bd-4a03-a14f-9c87161bc4ed.jpg" width="200">
-<img src = "https://user-images.githubusercontent.com/52556870/155465865-afdf24db-a495-4a06-b960-5475dce43e77.jpg" width="200">
-<img src = "https://user-images.githubusercontent.com/52556870/155465877-545dc428-475d-457f-9702-60aef9e4f3cf.jpg" width="200">
-</p>
-<p float="left">
-<img src = "https://user-images.githubusercontent.com/52556870/155465884-1a9152fb-6049-4b03-9f93-b6f35594d694.jpg" width="200">
 <img src = "https://user-images.githubusercontent.com/52556870/155465899-74125621-fa2d-495d-a627-8af60199eeca.jpg" width="200">
 <img src = "https://user-images.githubusercontent.com/52556870/155465908-f1641218-9a08-4d33-8835-0dba81dc78b1.jpg" width="200">
+</p>
+
+<p float="left">
+<img src = "https://user-images.githubusercontent.com/52556870/155465865-afdf24db-a495-4a06-b960-5475dce43e77.jpg" width="200">
+<img src = "https://user-images.githubusercontent.com/52556870/155465877-545dc428-475d-457f-9702-60aef9e4f3cf.jpg" width="200">
+<img src = "https://user-images.githubusercontent.com/52556870/155465884-1a9152fb-6049-4b03-9f93-b6f35594d694.jpg" width="200">
 </p>
 
 < Learnd ✍🏻 >
